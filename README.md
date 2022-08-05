@@ -159,7 +159,7 @@ using helm-operator-plugins rest client getter
 using helm-operator-plugins rest client getter
 ==================
 WARNING: DATA RACE
-Write at 0x00c0004f9460 by goroutine 22:
+Write at 0x00c0001c1220 by goroutine 24:
   k8s.io/cli-runtime/pkg/resource.ClientConfigFunc.unstructuredClientForGroupVersion()
       /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/client.go:49 +0x15b
   k8s.io/cli-runtime/pkg/resource.(*Builder).getClient()
@@ -193,11 +193,11 @@ Write at 0x00c0004f9460 by goroutine 22:
   k8s.io/cli-runtime/pkg/resource.(*Result).Infos()
       /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/result.go:122 +0x161
   main.iterateUsingResourceBuilder()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:56 +0x3b5
+      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:66 +0x3b5
   main.main.func1()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:27 +0x73
+      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:35 +0x73
 
-Previous write at 0x00c0004f9460 by goroutine 23:
+Previous write at 0x00c0001c1220 by goroutine 23:
   k8s.io/cli-runtime/pkg/resource.ClientConfigFunc.unstructuredClientForGroupVersion()
       /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/client.go:49 +0x15b
   k8s.io/cli-runtime/pkg/resource.(*Builder).getClient()
@@ -231,21 +231,21 @@ Previous write at 0x00c0004f9460 by goroutine 23:
   k8s.io/cli-runtime/pkg/resource.(*Result).Infos()
       /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/result.go:122 +0x161
   main.iterateUsingResourceBuilder()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:56 +0x3b5
+      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:66 +0x3b5
   main.main.func1()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:27 +0x73
+      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:35 +0x73
 
-Goroutine 22 (running) created at:
+Goroutine 24 (running) created at:
   main.main()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:25 +0x228
+      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:33 +0x26c
 
 Goroutine 23 (running) created at:
   main.main()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:25 +0x228
+      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:33 +0x26c
 ==================
 ==================
 WARNING: DATA RACE
-Write at 0x00c0004f9450 by goroutine 22:
+Write at 0x00c0001c1210 by goroutine 24:
   k8s.io/cli-runtime/pkg/resource.ClientConfigFunc.unstructuredClientForGroupVersion()
       /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/client.go:54 +0x25d
   k8s.io/cli-runtime/pkg/resource.(*Builder).getClient()
@@ -279,11 +279,11 @@ Write at 0x00c0004f9450 by goroutine 22:
   k8s.io/cli-runtime/pkg/resource.(*Result).Infos()
       /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/result.go:122 +0x161
   main.iterateUsingResourceBuilder()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:56 +0x3b5
+      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:66 +0x3b5
   main.main.func1()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:27 +0x73
+      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:35 +0x73
 
-Previous write at 0x00c0004f9450 by goroutine 23:
+Previous write at 0x00c0001c1210 by goroutine 23:
   k8s.io/cli-runtime/pkg/resource.ClientConfigFunc.unstructuredClientForGroupVersion()
       /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/client.go:54 +0x25d
   k8s.io/cli-runtime/pkg/resource.(*Builder).getClient()
@@ -317,291 +317,19 @@ Previous write at 0x00c0004f9450 by goroutine 23:
   k8s.io/cli-runtime/pkg/resource.(*Result).Infos()
       /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/result.go:122 +0x161
   main.iterateUsingResourceBuilder()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:56 +0x3b5
+      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:66 +0x3b5
   main.main.func1()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:27 +0x73
+      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:35 +0x73
 
-Goroutine 22 (running) created at:
+Goroutine 24 (running) created at:
   main.main()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:25 +0x228
+      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:33 +0x26c
 
 Goroutine 23 (running) created at:
   main.main()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:25 +0x228
+      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:33 +0x26c
 ==================
-==================
-WARNING: DATA RACE
-Read at 0x00c000520ca0 by goroutine 22:
-  runtime.racereadrange()
-      <autogenerated>:1 +0x1b
-  k8s.io/client-go/rest.RESTClientFor()
-      /home/mowsiany/go/pkg/mod/k8s.io/client-go@v0.23.1/rest/config.go:320 +0x6a
-  k8s.io/cli-runtime/pkg/resource.ClientConfigFunc.unstructuredClientForGroupVersion()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/client.go:57 +0x297
-  k8s.io/cli-runtime/pkg/resource.(*Builder).getClient()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/builder.go:937 +0x1e9
-  k8s.io/cli-runtime/pkg/resource.(*Builder).getClient-fm()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/builder.go:925 +0x84
-  k8s.io/cli-runtime/pkg/resource.(*mapper).infoForData()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/mapper.go:71 +0x87b
-  k8s.io/cli-runtime/pkg/resource.(*StreamVisitor).Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:572 +0x349
-  k8s.io/cli-runtime/pkg/resource.EagerVisitorList.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:209 +0x1b9
-  k8s.io/cli-runtime/pkg/resource.(*EagerVisitorList).Visit()
-      <autogenerated>:1 +0x6a
-  k8s.io/cli-runtime/pkg/resource.FlattenListVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:387 +0x112
-  k8s.io/cli-runtime/pkg/resource.(*FlattenListVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.FlattenListVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:387 +0x112
-  k8s.io/cli-runtime/pkg/resource.(*FlattenListVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.ContinueOnErrorVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:350 +0x161
-  k8s.io/cli-runtime/pkg/resource.(*ContinueOnErrorVisitor).Visit()
-      <autogenerated>:1 +0x66
-  k8s.io/cli-runtime/pkg/resource.DecoratedVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:322 +0x10d
-  k8s.io/cli-runtime/pkg/resource.(*DecoratedVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.(*Result).Infos()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/result.go:122 +0x161
-  main.iterateUsingResourceBuilder()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:56 +0x3b5
-  main.main.func1()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:27 +0x73
-
-Previous write at 0x00c000520ca0 by goroutine 23:
-  k8s.io/cli-runtime/pkg/resource.ClientConfigFunc.unstructuredClientForGroupVersion()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/client.go:44 +0x75
-  k8s.io/cli-runtime/pkg/resource.(*Builder).getClient()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/builder.go:937 +0x1e9
-  k8s.io/cli-runtime/pkg/resource.(*Builder).getClient-fm()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/builder.go:925 +0x84
-  k8s.io/cli-runtime/pkg/resource.(*mapper).infoForData()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/mapper.go:71 +0x87b
-  k8s.io/cli-runtime/pkg/resource.(*StreamVisitor).Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:572 +0x349
-  k8s.io/cli-runtime/pkg/resource.EagerVisitorList.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:209 +0x1b9
-  k8s.io/cli-runtime/pkg/resource.(*EagerVisitorList).Visit()
-      <autogenerated>:1 +0x6a
-  k8s.io/cli-runtime/pkg/resource.FlattenListVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:387 +0x112
-  k8s.io/cli-runtime/pkg/resource.(*FlattenListVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.FlattenListVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:387 +0x112
-  k8s.io/cli-runtime/pkg/resource.(*FlattenListVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.ContinueOnErrorVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:350 +0x161
-  k8s.io/cli-runtime/pkg/resource.(*ContinueOnErrorVisitor).Visit()
-      <autogenerated>:1 +0x66
-  k8s.io/cli-runtime/pkg/resource.DecoratedVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:322 +0x10d
-  k8s.io/cli-runtime/pkg/resource.(*DecoratedVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.(*Result).Infos()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/result.go:122 +0x161
-  main.iterateUsingResourceBuilder()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:56 +0x3b5
-  main.main.func1()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:27 +0x73
-
-Goroutine 22 (running) created at:
-  main.main()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:25 +0x228
-
-Goroutine 23 (running) created at:
-  main.main()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:25 +0x228
-==================
-==================
-WARNING: DATA RACE
-Read at 0x00c00044a0e0 by goroutine 23:
-  runtime.racereadrange()
-      <autogenerated>:1 +0x1b
-  k8s.io/client-go/rest.RESTClientForConfigAndClient()
-      /home/mowsiany/go/pkg/mod/k8s.io/client-go@v0.23.1/rest/config.go:347 +0xa4
-  k8s.io/client-go/rest.RESTClientFor()
-      /home/mowsiany/go/pkg/mod/k8s.io/client-go@v0.23.1/rest/config.go:330 +0xb0
-  k8s.io/cli-runtime/pkg/resource.ClientConfigFunc.unstructuredClientForGroupVersion()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/client.go:57 +0x297
-  k8s.io/cli-runtime/pkg/resource.(*Builder).getClient()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/builder.go:937 +0x1e9
-  k8s.io/cli-runtime/pkg/resource.(*Builder).getClient-fm()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/builder.go:925 +0x84
-  k8s.io/cli-runtime/pkg/resource.(*mapper).infoForData()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/mapper.go:71 +0x87b
-  k8s.io/cli-runtime/pkg/resource.(*StreamVisitor).Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:572 +0x349
-  k8s.io/cli-runtime/pkg/resource.EagerVisitorList.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:209 +0x1b9
-  k8s.io/cli-runtime/pkg/resource.(*EagerVisitorList).Visit()
-      <autogenerated>:1 +0x6a
-  k8s.io/cli-runtime/pkg/resource.FlattenListVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:387 +0x112
-  k8s.io/cli-runtime/pkg/resource.(*FlattenListVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.FlattenListVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:387 +0x112
-  k8s.io/cli-runtime/pkg/resource.(*FlattenListVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.ContinueOnErrorVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:350 +0x161
-  k8s.io/cli-runtime/pkg/resource.(*ContinueOnErrorVisitor).Visit()
-      <autogenerated>:1 +0x66
-  k8s.io/cli-runtime/pkg/resource.DecoratedVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:322 +0x10d
-  k8s.io/cli-runtime/pkg/resource.(*DecoratedVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.(*Result).Infos()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/result.go:122 +0x161
-  main.iterateUsingResourceBuilder()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:56 +0x3b5
-  main.main.func1()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:27 +0x73
-
-Previous write at 0x00c00044a0e0 by goroutine 22:
-  k8s.io/cli-runtime/pkg/resource.ClientConfigFunc.unstructuredClientForGroupVersion()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/client.go:44 +0x75
-  k8s.io/cli-runtime/pkg/resource.(*Builder).getClient()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/builder.go:937 +0x1e9
-  k8s.io/cli-runtime/pkg/resource.(*Builder).getClient-fm()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/builder.go:925 +0x84
-  k8s.io/cli-runtime/pkg/resource.(*mapper).infoForData()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/mapper.go:71 +0x87b
-  k8s.io/cli-runtime/pkg/resource.(*StreamVisitor).Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:572 +0x349
-  k8s.io/cli-runtime/pkg/resource.EagerVisitorList.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:209 +0x1b9
-  k8s.io/cli-runtime/pkg/resource.(*EagerVisitorList).Visit()
-      <autogenerated>:1 +0x6a
-  k8s.io/cli-runtime/pkg/resource.FlattenListVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:387 +0x112
-  k8s.io/cli-runtime/pkg/resource.(*FlattenListVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.FlattenListVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:387 +0x112
-  k8s.io/cli-runtime/pkg/resource.(*FlattenListVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.ContinueOnErrorVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:350 +0x161
-  k8s.io/cli-runtime/pkg/resource.(*ContinueOnErrorVisitor).Visit()
-      <autogenerated>:1 +0x66
-  k8s.io/cli-runtime/pkg/resource.DecoratedVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:322 +0x10d
-  k8s.io/cli-runtime/pkg/resource.(*DecoratedVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.(*Result).Infos()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/result.go:122 +0x161
-  main.iterateUsingResourceBuilder()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:56 +0x3b5
-  main.main.func1()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:27 +0x73
-
-Goroutine 23 (running) created at:
-  main.main()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:25 +0x228
-
-Goroutine 22 (running) created at:
-  main.main()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:25 +0x228
-==================
-==================
-WARNING: DATA RACE
-Read at 0x00c00044a160 by goroutine 23:
-  runtime.racereadrange()
-      <autogenerated>:1 +0x1b
-  k8s.io/client-go/rest.RESTClientFor()
-      /home/mowsiany/go/pkg/mod/k8s.io/client-go@v0.23.1/rest/config.go:330 +0xb0
-  k8s.io/cli-runtime/pkg/resource.ClientConfigFunc.unstructuredClientForGroupVersion()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/client.go:57 +0x297
-  k8s.io/cli-runtime/pkg/resource.(*Builder).getClient()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/builder.go:937 +0x1e9
-  k8s.io/cli-runtime/pkg/resource.(*Builder).getClient-fm()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/builder.go:925 +0x84
-  k8s.io/cli-runtime/pkg/resource.(*mapper).infoForData()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/mapper.go:71 +0x87b
-  k8s.io/cli-runtime/pkg/resource.(*StreamVisitor).Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:572 +0x349
-  k8s.io/cli-runtime/pkg/resource.EagerVisitorList.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:209 +0x1b9
-  k8s.io/cli-runtime/pkg/resource.(*EagerVisitorList).Visit()
-      <autogenerated>:1 +0x6a
-  k8s.io/cli-runtime/pkg/resource.FlattenListVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:387 +0x112
-  k8s.io/cli-runtime/pkg/resource.(*FlattenListVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.FlattenListVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:387 +0x112
-  k8s.io/cli-runtime/pkg/resource.(*FlattenListVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.ContinueOnErrorVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:350 +0x161
-  k8s.io/cli-runtime/pkg/resource.(*ContinueOnErrorVisitor).Visit()
-      <autogenerated>:1 +0x66
-  k8s.io/cli-runtime/pkg/resource.DecoratedVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:322 +0x10d
-  k8s.io/cli-runtime/pkg/resource.(*DecoratedVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.(*Result).Infos()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/result.go:122 +0x161
-  main.iterateUsingResourceBuilder()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:56 +0x3b5
-  main.main.func1()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:27 +0x73
-
-Previous write at 0x00c00044a160 by goroutine 22:
-  k8s.io/cli-runtime/pkg/resource.ClientConfigFunc.unstructuredClientForGroupVersion()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/client.go:44 +0x75
-  k8s.io/cli-runtime/pkg/resource.(*Builder).getClient()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/builder.go:937 +0x1e9
-  k8s.io/cli-runtime/pkg/resource.(*Builder).getClient-fm()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/builder.go:925 +0x84
-  k8s.io/cli-runtime/pkg/resource.(*mapper).infoForData()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/mapper.go:71 +0x87b
-  k8s.io/cli-runtime/pkg/resource.(*StreamVisitor).Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:572 +0x349
-  k8s.io/cli-runtime/pkg/resource.EagerVisitorList.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:209 +0x1b9
-  k8s.io/cli-runtime/pkg/resource.(*EagerVisitorList).Visit()
-      <autogenerated>:1 +0x6a
-  k8s.io/cli-runtime/pkg/resource.FlattenListVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:387 +0x112
-  k8s.io/cli-runtime/pkg/resource.(*FlattenListVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.FlattenListVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:387 +0x112
-  k8s.io/cli-runtime/pkg/resource.(*FlattenListVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.ContinueOnErrorVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:350 +0x161
-  k8s.io/cli-runtime/pkg/resource.(*ContinueOnErrorVisitor).Visit()
-      <autogenerated>:1 +0x66
-  k8s.io/cli-runtime/pkg/resource.DecoratedVisitor.Visit()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/visitor.go:322 +0x10d
-  k8s.io/cli-runtime/pkg/resource.(*DecoratedVisitor).Visit()
-      <autogenerated>:1 +0xa6
-  k8s.io/cli-runtime/pkg/resource.(*Result).Infos()
-      /home/mowsiany/go/pkg/mod/k8s.io/cli-runtime@v0.23.1/pkg/resource/result.go:122 +0x161
-  main.iterateUsingResourceBuilder()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:56 +0x3b5
-  main.main.func1()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:27 +0x73
-
-Goroutine 23 (running) created at:
-  main.main()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:25 +0x228
-
-Goroutine 22 (running) created at:
-  main.main()
-      /home/mowsiany/go/src/github.com/porridge/config-race-repro/repro.go:25 +0x228
-==================
-Found 5 data race(s)
+Found 2 data race(s)
 exit status 66
 [mowsiany@mowsiany config-race-repro]$ 
 ```
